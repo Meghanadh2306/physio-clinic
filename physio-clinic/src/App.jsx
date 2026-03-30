@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar"; // ✅ ADD THIS
 import Footer from "./components/Footer"; // ✅ ADD THIS
+import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./pages/Home";
 import Services from "./pages/Services";
@@ -18,6 +19,7 @@ import Register from "./pages/Register";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar /> {/* ✅ ADD THIS */}
 
       <Routes>

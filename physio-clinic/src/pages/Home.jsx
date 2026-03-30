@@ -9,7 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/home")
+      .get("https://physio-backend-swd8.onrender.com/api/home")
       .then((res) => setData(res.data))
       .catch((err) => console.error("API Error:", err));
   }, []);

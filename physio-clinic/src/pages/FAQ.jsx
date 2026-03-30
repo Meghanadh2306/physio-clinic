@@ -7,7 +7,7 @@ const FAQ = () => {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/faq")
+    axios.get("https://physio-backend-swd8.onrender.com/api/faq")
       .then(res => setFaqs(res.data));
   }, []);
 

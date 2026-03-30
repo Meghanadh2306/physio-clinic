@@ -7,7 +7,7 @@ const Reviews = () => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/reviews")
+    axios.get("https://physio-backend-swd8.onrender.com/api/reviews")
       .then(res => {
         setReviews(res.data.reviews || []);
         setRating(res.data.rating);

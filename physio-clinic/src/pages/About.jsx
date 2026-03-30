@@ -8,13 +8,13 @@ const About = () => {
 useEffect(() => {
   // About data
   axios
-    .get("http://localhost:5000/api/about")
+    .get("https://physio-backend-swd8.onrender.com/api/about")
     .then((res) => setData(res.data))
     .catch(() => setData({}));
 
   // Certificates
   axios
-    .get("http://localhost:5000/api/certificates")
+    .get("https://physio-backend-swd8.onrender.com/api/certificates")
     .then((res) => setCertificates(res.data))
     .catch(() => console.log("Certificate fetch error"));
 }, []);

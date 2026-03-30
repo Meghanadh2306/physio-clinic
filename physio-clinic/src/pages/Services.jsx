@@ -6,7 +6,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/services")
+    axios.get("https://physio-backend-swd8.onrender.com/api/services")
       .then(res => setServices(res.data))
       .catch(() => setServices([]));
   }, []);

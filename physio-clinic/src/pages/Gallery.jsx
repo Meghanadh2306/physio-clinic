@@ -8,7 +8,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/gallery")
+    axios.get("https://physio-backend-swd8.onrender.com/api/gallery")
       .then(res => setImages(res.data));
   }, []);
 

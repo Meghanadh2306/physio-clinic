@@ -13,7 +13,7 @@ const AdminLogin = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/admin/login",
+        "https://physio-backend-swd8.onrender.com/api/admin/login",
         form
       );
 

@@ -38,7 +38,7 @@ const [home, setHome] = useState({
 
   const fetchHome = async () => {
   try {
-    const res = await axios.get("http://localhost:5000/api/home");
+    const res = await axios.get("https://physio-backend-swd8.onrender.com/api/home");
     if (res.data) setHome(res.data);
   } catch {
     console.log("Home fetch failed");
@@ -46,12 +46,12 @@ const [home, setHome] = useState({
 };
 
   const fetchFaqs = async () => {
-    const res = await axios.get("http://localhost:5000/api/faq");
+    const res = await axios.get("https://physio-backend-swd8.onrender.com/api/faq");
     setFaqs(res.data);
   };
 
   const fetchContact = async () => {
-    const res = await axios.get("http://localhost:5000/api/contact");
+    const res = await axios.get("https://physio-backend-swd8.onrender.com/api/contact");
     if (res.data) setContact(res.data);
   };
 
@@ -75,7 +75,7 @@ const saveHome = async () => {
       formData.append("image", home.image);
     }
 
-    await axios.post("http://localhost:5000/api/home", formData);
+    await axios.post("https://physio-backend-swd8.onrender.com/api/home", formData);
 
     alert("Home Updated ✅");
     fetchHome();
@@ -92,19 +92,19 @@ const saveHome = async () => {
       return;
     }
 
-    await axios.post("http://localhost:5000/api/faq", faq);
+    await axios.post("https://physio-backend-swd8.onrender.com/api/faq", faq);
     setFaq({ question: "", answer: "" });
     fetchFaqs();
   };
 
   const deleteFaq = async (id) => {
-    await axios.delete(`http://localhost:5000/api/faq/${id}`);
+    await axios.delete(`https://physio-backend-swd8.onrender.com/api/faq/${id}`);
     fetchFaqs();
   };
 
   // ================= CONTACT =================
   const saveContact = async () => {
-    await axios.post("http://localhost:5000/api/contact", contact);
+    await axios.post("https://physio-backend-swd8.onrender.com/api/contact", contact);
     alert("Contact Updated ✅");
   };
 
@@ -129,13 +129,13 @@ const [about, setAbout] = useState({
 });
 
 const fetchAbout = async () => {
-  const res = await axios.get("http://localhost:5000/api/about");
+  const res = await axios.get("https://physio-backend-swd8.onrender.com/api/about");
   if (res.data) setAbout(res.data);
 };
 
 // ================= SERVICES FETCH =================
 const fetchServices = async () => {
-  const res = await axios.get("http://localhost:5000/api/services");
+  const res = await axios.get("https://physio-backend-swd8.onrender.com/api/services");
   setServices(res.data);
 };
 
@@ -148,7 +148,7 @@ const [gallery, setGallery] = useState({
 const [galleryList, setGalleryList] = useState([]);
 
 const fetchGallery = async () => {
-  const res = await axios.get("http://localhost:5000/api/gallery");
+  const res = await axios.get("https://physio-backend-swd8.onrender.com/api/gallery");
   setGalleryList(res.data);
 };
 
@@ -162,7 +162,7 @@ const [certificates, setCertificates] = useState([]);
 
 // ================= CERTIFICATES =================
 const fetchCertificates = async () => {
-  const res = await axios.get("http://localhost:5000/api/certificates");
+  const res = await axios.get("https://physio-backend-swd8.onrender.com/api/certificates");
   setCertificates(res.data);
 };
 
@@ -424,7 +424,7 @@ onClick={async () => {
       formData.append("image", about.image);
     }
 
-    await axios.post("http://localhost:5000/api/about", formData, {
+    await axios.post("https://physio-backend-swd8.onrender.com/api/about", formData, {
       headers: { "Content-Type": "multipart/form-data" }
     });
 
@@ -487,7 +487,7 @@ onClick={async () => {
       formData.append("image", certificate.image);
       formData.append("title", certificate.title);
 
-      await axios.post("http://localhost:5000/api/certificates", formData);
+      await axios.post("https://physio-backend-swd8.onrender.com/api/certificates", formData);
 
       alert("Uploaded ✅");
       setCertificate({ image: null, title: "" });
@@ -514,7 +514,7 @@ onClick={async () => {
 
         <button
           onClick={async () => {
-            await axios.delete(`http://localhost:5000/api/certificates/${cert._id}`);
+            await axios.delete(`https://physio-backend-swd8.onrender.com/api/certificates/${cert._id}`);
             fetchCertificates();
           }}
           className="text-red-500 text-sm"
@@ -567,7 +567,7 @@ onClick={async () => {
               return;
             }
 
-            axios.post("http://localhost:5000/api/services", service)
+            axios.post("https://physio-backend-swd8.onrender.com/api/services", service)
               .then(() => {
                 alert("Service Added ✅");
                 setService({ title: "", description: "", tag: "", icon: "" });
@@ -640,7 +640,7 @@ onClick={async () => {
               formData.append("image", gallery.image);
               formData.append("category", gallery.category);
 
-              axios.post("http://localhost:5000/api/gallery", formData)
+              axios.post("https://physio-backend-swd8.onrender.com/api/gallery", formData)
                 .then(() => {
                   alert("Image Uploaded ✅");
                   setGallery({ image: null, category: "" });
@@ -679,7 +679,7 @@ onClick={async () => {
 
                   <button
                     onClick={() => {
-                      axios.delete(`http://localhost:5000/api/gallery/${img._id}`)
+                      axios.delete(`https://physio-backend-swd8.onrender.com/api/gallery/${img._id}`)
                         .then(() => {
                           alert("Deleted ✅");
                           fetchGallery();
@@ -724,7 +724,7 @@ onClick={async () => {
             {/* DELETE BUTTON */}
             <button
               onClick={() => {
-                axios.delete(`http://localhost:5000/api/services/${s._id}`)
+                axios.delete(`https://physio-backend-swd8.onrender.com/api/services/${s._id}`)
                   .then(() => fetchServices());
               }}
               className="text-red-500"

@@ -12,7 +12,7 @@ const Contact = () => {
   });
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/contact")
+    axios.get("https://physio-backend-swd8.onrender.com/api/contact")
       .then(res => setData(res.data))
       .catch(() => setData({}));
   }, []);

@@ -7,7 +7,7 @@ const Appointment = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/contact")
+    axios.get("https://physio-backend-swd8.onrender.com/api/contact")
       .then(res => {
         setContact(res.data);
         setLoading(false);

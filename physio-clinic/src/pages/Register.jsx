@@ -21,7 +21,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", form);
+      await axios.post("https://physio-backend-swd8.onrender.com/api/auth/register", form);
 
       alert("Registration successful ✅");
       navigate("/admin-login"); // redirect to login

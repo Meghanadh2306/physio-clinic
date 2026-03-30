@@ -4,7 +4,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Apply font globally */
-body {
-  font-family: 'Inter', sans-serif;
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-slate-50 text-gray-800;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-medical-900 tracking-tight;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-medical-600 text-white px-6 py-2.5 rounded-full font-medium shadow-md shadow-medical-500/30 hover:bg-medical-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300;
+  }
+  .btn-outline {
+    @apply border-2 border-medical-600 text-medical-700 px-6 py-2.5 rounded-full font-medium hover:bg-medical-50 hover:text-medical-800 transition-all duration-300;
+  }
+  
+  /* Cards */
+  .medical-card {
+    @apply bg-white p-6 rounded-2xl shadow-[0_4px_20px_-2px_rgba(0,0,0,0.05)] border border-gray-100 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300;
+  }
+  
+  /* Badges */
+  .medical-badge {
+    @apply inline-block bg-medical-50 text-medical-700 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase border border-medical-100;
+  }
+
+  /* Section Containers */
+  .section-container {
+    @apply py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-12 text-medical-900;
+  }
 }

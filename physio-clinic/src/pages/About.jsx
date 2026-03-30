@@ -25,7 +25,7 @@ useEffect(() => {
     <div>
 
       {/* ================= SECTION 1 (DYNAMIC) ================= */}
-      <section className="bg-[#f7f5f2] px-6 md:px-20 py-20">
+      <section className="section-container bg-slate-50">
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
           {/* IMAGE */}
@@ -37,7 +37,7 @@ useEffect(() => {
             />
 
             {data.experience && (
-              <div className="absolute bottom-4 right-4 bg-green-700 text-white px-4 py-2 rounded-xl text-sm font-bold shadow">
+              <div className="absolute -bottom-6 -right-6 bg-medical-600 text-white px-6 py-4 rounded-2xl text-sm font-bold shadow-soft border-4 border-slate-50 text-center tracking-wide">
                 {data.experience}
               </div>
             )}
@@ -49,11 +49,11 @@ useEffect(() => {
               ABOUT US
             </p>
 
-            <h1 className="text-3xl md:text-5xl font-semibold text-gray-900 mb-4">
+            <h1 className="section-title text-left mb-6 leading-tight">
               {data.title || "Dr. Janiki Lakshmi"}
             </h1>
 
-            <p className="text-gray-500 mb-6">
+            <p className="text-gray-600 mb-8 text-lg leading-relaxed">
               {data.description || "Experienced physiotherapist dedicated to patient recovery."}
             </p>
 
@@ -95,18 +95,20 @@ useEffect(() => {
       </section>
 
       {/* ===================== SECTION 2 ===================== */}
-      <section className="bg-white px-6 md:px-20 py-20 text-center">
-        <p className="text-green-600 text-xs font-semibold tracking-widest mb-2">
-          YOUR VISIT
-        </p>
+      <section className="section-container bg-white">
+        <div className="text-center">
+          <p className="text-green-600 text-xs font-semibold tracking-widest mb-2">
+            YOUR VISIT
+          </p>
 
-        <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 mb-4">
-          What to Expect at Your First Visit
-        </h2>
+          <h2 className="section-title mb-4">
+            What to Expect at Your First Visit
+          </h2>
 
-        <p className="text-gray-500 mb-12 text-sm">
-          Here’s how we guide you through your recovery journey step by step.
-        </p>
+          <p className="text-gray-500 mb-12 text-lg max-w-2xl mx-auto">
+            Here’s how we guide you through your recovery journey step by step.
+          </p>
+        </div>
 
         <div className="max-w-3xl mx-auto space-y-8 text-left">
           {[
@@ -127,16 +129,18 @@ useEffect(() => {
       </section>
 
       {/* ===================== SECTION 3 ===================== */}
-      <section className="bg-[#f1ebe4] px-6 md:px-20 py-20 text-center">
-        <p className="text-green-600 text-xs font-semibold tracking-widest mb-2">
-          OUR STANDARDS
-        </p>
+      <section className="section-container bg-medical-50/50">
+        <div className="text-center">
+          <p className="text-green-600 text-xs font-semibold tracking-widest mb-2">
+            OUR STANDARDS
+          </p>
 
-        <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 mb-12">
-          Modern Care, Maximum Comfort
-        </h2>
+          <h2 className="section-title">
+            Modern Care, Maximum Comfort
+          </h2>
+        </div>
 
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-4 gap-6 mt-8">
           {[
             {
               title: "Advanced Equipment",
@@ -169,14 +173,16 @@ useEffect(() => {
         </div>
       </section>
           {/* ================= CERTIFICATES ================= */}
-      <section className="bg-white px-6 md:px-20 py-20 text-center">
-        <p className="text-green-600 text-xs font-semibold tracking-widest mb-2">
-          CERTIFICATIONS
-        </p>
+      <section className="section-container bg-white">
+        <div className="text-center">
+          <p className="text-green-600 text-xs font-semibold tracking-widest mb-2">
+            CERTIFICATIONS
+          </p>
 
-        <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 mb-12">
-          Certifications & Achievements
-        </h2>
+          <h2 className="section-title">
+            Certifications & Achievements
+          </h2>
+        </div>
 
         {certificates.length === 0 ? (
           <p className="text-gray-500">No certificates available</p>

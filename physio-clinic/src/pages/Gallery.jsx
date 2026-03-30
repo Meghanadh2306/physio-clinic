@@ -20,7 +20,7 @@ const Gallery = () => {
   return (
     <div>
 
-      <section className="bg-[#f7f5f2] px-6 md:px-20 py-20">
+      <section className="section-container bg-slate-50">
 
         {/* HEADER */}
         <div className="text-center mb-12">
@@ -28,7 +28,7 @@ const Gallery = () => {
             GALLERY
           </p>
 
-          <h1 className="text-3xl md:text-5xl font-semibold">
+          <h1 className="section-title mb-4">
             Inside Our Clinic
           </h1>
 
@@ -43,10 +43,10 @@ const Gallery = () => {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-2 rounded-full ${
+              className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 uppercase tracking-wide text-sm ${
                 filter === cat
-                  ? "bg-green-600 text-white"
-                  : "bg-gray-200"
+                  ? "bg-medical-600 text-white shadow-md shadow-medical-500/30"
+                  : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 hover:text-medical-600"
               }`}
             >
               {cat}
@@ -60,11 +60,11 @@ const Gallery = () => {
             <div
               key={img._id}
               onClick={() => setSelectedImage(img.image)}
-              className="cursor-pointer rounded-2xl overflow-hidden shadow hover:scale-105 transition"
+              className="medical-card !p-2 cursor-pointer rounded-3xl overflow-hidden group"
             >
               <img
                 src={img.image}
-                className="w-full h-[250px] object-cover"
+                className="w-full h-[250px] object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
               />
             </div>
           ))}

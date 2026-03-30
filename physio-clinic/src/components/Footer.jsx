@@ -15,7 +15,7 @@ const Footer = () => {
 
         {/* LEFT - Clinic Info */}
         <div>
-          <h2 className="text-xl font-semibold mb-4">Sri Physiotherapy Clinic</h2>
+          <h2 className="text-xl font-semibold mb-4 text-white">Sri Physiotherapy Clinic</h2>
           <p className="text-gray-300 text-sm leading-6">
             Advanced physiotherapy care for pain relief, recovery, and mobility.
             Expert therapists, personalized treatments, and modern techniques —
@@ -23,43 +23,43 @@ const Footer = () => {
           </p>
 
           <div className="flex gap-4 mt-6">
-  
-  {/* Instagram */}
-  <a
-    href="https://www.instagram.com/sriphysioeluru?igsh=azhpZ2dtc2podjJ4"
-    target="_blank"
-    rel="noreferrer"
-    className="bg-white/10 p-2 rounded-full hover:bg-pink-500 transition"
-  >
-    <FaInstagram />
-  </a>
 
-  {/* Google Reviews */}
-  <a
-    href="https://share.google/D2d74ha7CjrMlLFfL"
-    target="_blank"
-    rel="noreferrer"
-    className="bg-white/10 p-2 rounded-full hover:bg-yellow-400 transition"
-  >
-    <FaGoogle />
-  </a>
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/sriphysioeluru?igsh=azhpZ2dtc2podjJ4"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white/10 p-2 rounded-full hover:bg-pink-500 transition"
+            >
+              <FaInstagram />
+            </a>
 
-  {/* WhatsApp */}
-  <a
-    href="https://wa.me/919493800475?text=Hi%20I%20want%20to%20book%20an%20appointment"
-    target="_blank"
-    rel="noreferrer"
-    className="bg-white/10 p-2 rounded-full hover:bg-green-500 transition"
-  >
-    <FaWhatsapp />
-  </a>
+            {/* Google Reviews */}
+            <a
+              href="https://share.google/D2d74ha7CjrMlLFfL"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white/10 p-2 rounded-full hover:bg-yellow-400 transition"
+            >
+              <FaGoogle />
+            </a>
 
-</div>
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/919493800475?text=Hi%20I%20want%20to%20book%20an%20appointment"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white/10 p-2 rounded-full hover:bg-green-500 transition"
+            >
+              <FaWhatsapp />
+            </a>
+
+          </div>
         </div>
 
         {/* QUICK LINKS */}
         <div>
-          <h3 className="font-semibold mb-4">QUICK LINKS</h3>
+          <h3 className="font-semibold mb-4 text-white tracking-wider">QUICK LINKS</h3>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li><Link to="/" className="hover:text-white">Home</Link></li>
             <li><Link to="/services" className="hover:text-white">Services</Link></li>
@@ -73,7 +73,7 @@ const Footer = () => {
 
         {/* SERVICES */}
         <div>
-          <h3 className="font-semibold mb-4">SERVICES</h3>
+          <h3 className="font-semibold mb-4 text-white tracking-wider">SERVICES</h3>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li>Pain Management Therapy</li>
             <li>Exercise Therapy</li>
@@ -91,7 +91,7 @@ const Footer = () => {
 
         {/* CONTACT */}
         <div>
-          <h3 className="font-semibold mb-4">CONTACT</h3>
+          <h3 className="font-semibold mb-4 text-white tracking-wider">CONTACT</h3>
 
           {/* Address */}
           <p className="flex items-start gap-2 text-gray-300 text-sm">
@@ -131,7 +131,7 @@ const Footer = () => {
           {/* Timings */}
           <p className="flex items-center gap-2 text-gray-300 text-sm mt-3">
             <FaClock />
-            Mon–Sat 9 AM – 9 PM
+            Monday to Saturday from 10 AM to 1:30 PM and 5:30 AM to 9 PM
           </p>
 
           {/* Appointment Button */}

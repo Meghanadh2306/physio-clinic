@@ -24,7 +24,7 @@ const Contact = () => {
   return (
     <div>
 
-      <section className="bg-[#f7f5f2] px-6 md:px-20 py-20">
+      <section className="section-container bg-slate-50">
 
         {/* HEADER */}
         <div className="text-center mb-16">
@@ -32,11 +32,11 @@ const Contact = () => {
             CONTACT
           </p>
 
-          <h1 className="text-3xl md:text-5xl font-semibold text-gray-900">
+          <h1 className="section-title mb-4">
             Visit Us or Get in Touch
           </h1>
 
-          <p className="text-gray-500 mt-3 text-sm">
+          <p className="text-gray-600 mt-3 text-lg max-w-2xl mx-auto">
             We are here to help. Reach out to book an appointment or ask any questions.
           </p>
         </div>
@@ -45,7 +45,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-10 items-stretch">
 
           {/* LEFT CARD */}
-          <div className="bg-white rounded-3xl shadow-md p-8 flex flex-col">
+          <div className="medical-card rounded-3xl p-8 flex flex-col border-0">
 
             <h2 className="text-lg font-semibold text-gray-800 mb-6">
               Contact Information
@@ -117,8 +117,8 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer"
             >
-            <button className="w-full mt-6 bg-green-700 text-white py-3 rounded-full font-medium hover:bg-green-800 transition">
-                💬 Book on WhatsApp
+            <button className="w-full mt-8 btn-primary text-lg py-3.5 flex items-center justify-center gap-2">
+                <span className="text-xl">💬</span> Book on WhatsApp
             </button>
             </a>
 
@@ -177,7 +177,7 @@ Message: ${callback.message || "N/A"}`
                     window.open(link, "_blank");
                     setCallback({ name: "", phone: "", message: "" });
                 }}
-                className="w-full bg-green-700 text-white py-3 rounded-full hover:bg-green-800 transition"
+                className="w-full btn-outline border-medical-200 mt-2"
                 >
                 📩 Arrange a Callback
                 </button>

@@ -17,14 +17,14 @@ const Reviews = () => {
   }, []);
 
   return (
-    <section className="bg-gray-50 py-16 px-4">
+    <section className="section-container bg-slate-50">
       <div className="max-w-6xl mx-auto text-center">
 
         {/* Heading */}
         <span className="text-green-600 text-sm font-semibold uppercase">
           Reviews
         </span>
-        <h2 className="text-4xl font-bold mt-2">
+        <h2 className="section-title mt-2 mb-4">
           What Our Patients Say
         </h2>
         <p className="text-gray-500 mt-2">
@@ -32,7 +32,7 @@ const Reviews = () => {
         </p>
 
         {/* Google Rating */}
-        <div className="mt-6 inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow">
+        <div className="mt-6 inline-flex items-center gap-3 bg-white px-8 py-3.5 rounded-full shadow-md border border-gray-100">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
             alt="google"
@@ -46,7 +46,7 @@ const Reviews = () => {
         {/* Cards */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           {reviews.slice(0, 3).map((review, index) => (
-            <div key={index} className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <div key={index} className="medical-card text-left flex flex-col h-full">
 
               {/* Stars */}
               <div className="text-yellow-400 mb-3">
@@ -59,7 +59,7 @@ const Reviews = () => {
               </p>
 
               {/* User */}
-              <div className="flex items-center gap-3 mt-6">
+              <div className="flex items-center gap-3 mt-auto pt-6 border-t border-gray-100">
                 <div className="w-10 h-10 bg-green-100 text-green-600 flex items-center justify-center rounded-full font-bold">
                   {review.author_name[0]}
                 </div>
@@ -78,7 +78,7 @@ const Reviews = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 bg-white p-6 rounded-2xl shadow inline-block">
+        <div className="mt-16 medical-card inline-block max-w-md w-full">
           <p className="text-gray-600 mb-4">
             Had a great experience at our clinic?
           </p>
@@ -86,7 +86,7 @@ const Reviews = () => {
             href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition"
+            className="btn-primary block w-full mt-4"
           >
             Leave a Review on Google
           </a>

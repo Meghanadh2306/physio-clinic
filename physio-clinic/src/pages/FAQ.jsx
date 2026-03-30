@@ -18,7 +18,7 @@ const FAQ = () => {
   return (
     <div>
 
-      <section className="bg-[#f7f5f2] px-6 md:px-20 py-20 min-h-screen">
+      <section className="section-container bg-slate-50 min-h-[80vh]">
 
         {/* HEADER (MATCHES IMAGE) */}
         <div className="text-center mb-16">
@@ -29,7 +29,7 @@ const FAQ = () => {
           </span>
 
           {/* TITLE */}
-          <h1 className="text-3xl md:text-4xl font-semibold text-gray-900">
+          <h1 className="section-title mt-4 mb-4">
             Common Questions About Your Visit
           </h1>
 
@@ -45,10 +45,10 @@ const FAQ = () => {
           {faqs.map((item, index) => (
             <div
               key={index}
-              className={`rounded-xl p-4 transition-all duration-300 ${
+              className={`medical-card mb-4 !p-6 cursor-pointer transition-all duration-300 ${
                 active === index
-                  ? "bg-[#dce9e6] shadow-sm"
-                  : "bg-white"
+                  ? "ring-2 ring-medical-500 bg-medical-50/30"
+                  : ""
               }`}
             >
 

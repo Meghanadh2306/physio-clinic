@@ -33,15 +33,15 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-100 to-green-200 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4 py-12">
       
       <form
         onSubmit={handleRegister}
-        className="bg-white w-full max-w-sm p-8 rounded-2xl shadow-xl"
+        className="medical-card w-full max-w-sm !p-8"
       >
         {/* Header */}
         <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">
+          <h2 className="section-title !text-2xl !mb-2">
             Create Account
           </h2>
           <p className="text-sm text-gray-500">
@@ -98,7 +98,7 @@ const Register = () => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition duration-200"
+          className="w-full btn-primary mt-2"
         >
           {loading ? "Creating..." : "Register"}
         </button>

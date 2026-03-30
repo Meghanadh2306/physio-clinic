@@ -45,19 +45,19 @@ Issue:`
     <div>
       
 
-      <section className="bg-[#f7f5f2] px-6 md:px-20 py-20 text-center">
+      <section className="section-container bg-slate-50 flex flex-col items-center justify-center min-h-[80vh]">
 
         {/* HEADER */}
-        <h1 className="text-3xl md:text-5xl font-semibold mb-6">
+        <h1 className="section-title mb-4">
           Book an Appointment
         </h1>
 
-        <p className="text-gray-500 mb-10">
+        <p className="text-gray-500 mb-10 text-lg">
           Connect with us instantly on WhatsApp and schedule your visit.
         </p>
 
         {/* CARD */}
-        <div className="bg-white p-8 rounded-2xl shadow max-w-md mx-auto">
+        <div className="medical-card p-10 max-w-lg w-full text-center">
 
           <h2 className="text-lg font-semibold mb-4">
             Quick Booking via WhatsApp
@@ -72,9 +72,9 @@ Issue:`
             href={whatsappLink}
             target="_blank"
             rel="noreferrer"
-            className="block w-full bg-green-600 text-white py-3 rounded-full text-lg hover:bg-green-700 transition"
+            className="block w-full btn-primary text-lg py-4 flex items-center justify-center gap-3 mt-8"
           >
-            💬 Book on WhatsApp
+            <span className="text-2xl">💬</span> Book on WhatsApp
           </a>
 
           {/* NUMBER DISPLAY */}

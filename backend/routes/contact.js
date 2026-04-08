@@ -5,6 +5,8 @@ const Contact = require("../models/Contact");
 router.get("/", async (req, res) => {
   try {
     const data = await Contact.findOne();
+    // Add caching headers for better performance
+    res.set('Cache-Control', 'public, max-age=300'); // Cache for 5 minutes
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: err.message });

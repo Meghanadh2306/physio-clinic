@@ -7,6 +7,8 @@ const upload = require("../middleware/upload");
 router.get("/", async (req, res) => {
   try {
     const about = await About.findOne();
+    // Add caching headers for better performance
+    res.set('Cache-Control', 'public, max-age=300'); // Cache for 5 minutes
     res.json(about);
   } catch (err) {
     res.status(500).json({ error: err.message });

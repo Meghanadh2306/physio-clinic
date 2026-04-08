@@ -233,6 +233,7 @@ const fetchCertificates = async () => {
   <img
     src={URL.createObjectURL(home.image)}
     className="w-32 h-32 object-cover mb-3 rounded"
+    loading="lazy"
   />
 )}
 
@@ -384,6 +385,7 @@ const fetchCertificates = async () => {
         <img
           src={URL.createObjectURL(about.image)}
           className="w-32 h-32 object-cover mb-3 rounded"
+          loading="lazy"
         />
       )}
 
@@ -462,6 +464,7 @@ onClick={async () => {
     <img
       src={URL.createObjectURL(certificate.image)}
       className="w-32 h-32 object-cover mb-3 rounded"
+      loading="lazy"
     />
   )}
 
@@ -508,6 +511,7 @@ onClick={async () => {
         <img
           src={cert.image}
           className="w-full h-[150px] object-cover rounded mb-2"
+          loading="lazy"
         />
 
         <p className="text-sm text-center mb-2">{cert.title}</p>
@@ -605,6 +609,7 @@ onClick={async () => {
               src={URL.createObjectURL(gallery.image)}
               alt="preview"
               className="w-32 h-32 object-cover rounded mb-3 border"
+              loading="lazy"
             />
           )}
 
@@ -670,6 +675,7 @@ onClick={async () => {
                   src={img.image}
                   alt="gallery"
                   className="w-full h-[150px] object-cover rounded mb-2"
+                  loading="lazy"
                 />
 
                 <div className="flex justify-between items-center">

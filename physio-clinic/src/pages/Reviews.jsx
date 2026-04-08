@@ -37,6 +37,7 @@ const Reviews = () => {
             src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
             alt="google"
             className="h-5"
+            loading="lazy"
           />
           <span className="text-yellow-500">★★★★★</span>
           <span className="font-semibold">{rating}</span>

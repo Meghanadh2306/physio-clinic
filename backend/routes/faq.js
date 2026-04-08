@@ -4,8 +4,14 @@ const Faq = require("../models/Faq");
 
 // ✅ GET all FAQs
 router.get("/", async (req, res) => {
-  const faqs = await Faq.find();
-  res.json(faqs);
+  try {
+    const faqs = await Faq.find();
+    // Add caching headers for better performance
+    res.set('Cache-Control', 'public, max-age=300'); // Cache for 5 minutes
+    res.json(faqs);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 

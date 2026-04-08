@@ -15,7 +15,14 @@ const Home = () => {
   }, []);
 
   if (!data) {
-    return <div className="text-center mt-20">⏳ Loading...</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-medical-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -72,6 +79,7 @@ const Home = () => {
               }
               alt="clinic"
               className="rounded-3xl shadow-2xl border-4 border-white/10"
+              loading="lazy"
             />
 
             <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-gray-800 px-8 py-3 rounded-full shadow-xl border border-gray-100 whitespace-nowrap">
@@ -152,6 +160,7 @@ const Home = () => {
             src={data.image}
             alt="doctor"
             className="w-64 rounded-xl shadow"
+            loading="lazy"
           />
 
           <div>

@@ -4,8 +4,14 @@ const upload = require("../middleware/upload"); // 🔥 IMPORTANT
 
 // ================= GET =================
 router.get("/", async (req, res) => {
-  const data = await Gallery.find();
-  res.json(data);
+  try {
+    const data = await Gallery.find();
+    // Add caching headers for better performance
+    res.set('Cache-Control', 'public, max-age=300'); // Cache for 5 minutes
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 // ================= ADD (UPLOAD IMAGE) =================

@@ -19,7 +19,16 @@ useEffect(() => {
     .catch(() => console.log("Certificate fetch error"));
 }, []);
 
-  if (!data) return <div className="text-center mt-20">Loading...</div>;
+  if (!data) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-medical-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -34,6 +43,7 @@ useEffect(() => {
               src={data.image || "https://via.placeholder.com/500"}
               alt="doctor"
               className="rounded-2xl shadow-lg"
+              loading="lazy"
             />
 
             {data.experience && (
@@ -198,6 +208,7 @@ useEffect(() => {
                   src={cert.image || "https://via.placeholder.com/300"}
                   alt={cert.title || "certificate"}
                   className="w-full h-[200px] object-cover rounded-lg mb-3 hover:scale-105 transition duration-300"
+                  loading="lazy"
                 />
 
                 <p className="font-medium text-gray-800">

@@ -25,10 +25,10 @@ const Reviews = () => {
           Reviews
         </span>
         <h2 className="section-title mt-2 mb-4">
-          Patient Reviews & Testimonials
+          What Our Patients Say
         </h2>
         <p className="text-gray-500 mt-2">
-          Authentic patient experiences shared on Google Reviews
+          Real experiences from real patients
         </p>
 
         {/* Google Rating */}
@@ -37,7 +37,6 @@ const Reviews = () => {
             src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
             alt="google"
             className="h-5"
-            loading="lazy"
           />
           <span className="text-yellow-500">★★★★★</span>
           <span className="font-semibold">{rating}</span>
@@ -46,7 +45,7 @@ const Reviews = () => {
 
         {/* Cards */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
-          {reviews.map((review, index) => (
+          {reviews.slice(0, 3).map((review, index) => (
             <div key={index} className="medical-card text-left flex flex-col h-full">
 
               {/* Stars */}
@@ -81,13 +80,15 @@ const Reviews = () => {
         {/* CTA */}
         <div className="mt-16 medical-card inline-block max-w-md w-full">
           <p className="text-gray-600 mb-4">
-            Ready to experience our care?
+            Had a great experience at our clinic?
           </p>
           <a
-            href="/appointment"
-            className="btn-primary block w-full"
+            href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary block w-full mt-4"
           >
-            📅 Book Your Appointment
+            Leave a Review on Google
           </a>
         </div>
 

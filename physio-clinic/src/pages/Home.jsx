@@ -28,7 +28,7 @@ const Home = () => {
           {/* LEFT */}
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm border border-white/20">
-              <span className="text-yellow-400 text-lg">★</span> 5-Star Rated &bull; Trusted by 100+ Patients
+              <span className="text-yellow-400 text-lg">★</span> 5-Star Rated &bull; Trusted by 1000+ Patients
             </div>
 
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight text-white drop-shadow-md">
@@ -131,7 +131,7 @@ const Home = () => {
         <div className="grid md:grid-cols-4 gap-6 text-center max-w-6xl mx-auto">
           {[
             "Experienced Therapist",
-            "100+ Happy Patients",
+            "1000+ Happy Patients",
             "Modern Equipment",
             "Affordable Pricing",
           ].map((item, index) => (
